@@ -1,9 +1,23 @@
 # Show_Attend_and_Tell
 Implementation of SAT (Show, Attend and Tell)
 
-* **Requirements**
-
 ## Quick start
+
+### Training
+```
+python main.py --epochs [epoch]
+```
+
+### Inference
+```
+python main.py --prev_model [model_name] --inference --img_path ./data/Flicker8k/images/[img_name]
+```
+
+## Captioned Image Example
+
+![Example 1](./result/ex1.png)
+![Example 2](./result/ex2.png)
+![Example 3](./result/ex3.png)
 
 ## Reference
 1. Show, Attend and Tell: Neural Image Caption Generation with Visual Attention   
