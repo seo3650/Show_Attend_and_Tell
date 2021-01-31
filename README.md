@@ -15,9 +15,9 @@ python main.py --prev_model [model_name] --inference --img_path ./data/Flicker8k
 
 ## Captioned Image Example
 
-![Example 1](./result/ex1.png)
-![Example 2](./result/ex2.png)
-![Example 3](./result/ex3.png)
+![Example 1](./result/ex1.jpg)
+![Example 2](./result/ex2.jpg)
+![Example 3](./result/ex3.jpg)
 
 ## Reference
 1. Show, Attend and Tell: Neural Image Caption Generation with Visual Attention   
