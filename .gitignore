@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# etc
+data/Flicker8k/*
+data/
+.vscode/
+model/
