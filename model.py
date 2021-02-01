@@ -68,7 +68,7 @@ class Decoder(nn.Module):
         self.fc.bias.data.fill_(0)
         self.fc.weight.data.uniform_(-0.1, 0.1)
 
-    def forward(self, annotation, tgt, tgt_len, training):
+    def forward(self, annotation, tgt, tgt_len, training, inference=False):
         """
         annotation: (batch_size, num pixels, encoder_dim)
         tgt: (batch_size, length)
@@ -120,7 +120,7 @@ class Decoder(nn.Module):
             preds = self.fc(self.dropout(hidden))
             predictions[:batch_limit, t+1, :] = preds
             alphas[:batch_limit, t+1, :] = alpha.squeeze()
-            if not training:
+            if inference: # Inference
                 _, pred = torch.max(preds, dim=1)
                 if pred == torch.tensor(self.eos_idx):
                     return predictions, torch.tensor(t+2).view(1), alphas

@@ -190,7 +190,7 @@ def main(args):
         img_feature = img_feature.view(img_feature.shape[0], -1, img_feature.shape[-1])
         tgt_len = [torch.tensor(args.max_length)]
         tgt = torch.zeros(1, args.max_length)
-        sentence, tgt_len, alpha = model.decode(img_feature, tgt, tgt_len, False)
+        sentence, tgt_len, alpha = model.decode(img_feature, tgt, tgt_len, False, True)
         _, sentence = torch.max(sentence, dim=2)
         sentence = sentence.squeeze()
         sentence = sentence[:tgt_len[0]]
