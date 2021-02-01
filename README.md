@@ -13,6 +13,10 @@ python main.py --epochs [epoch]
 python main.py --prev_model [model_name] --inference --img_path ./data/Flicker8k/images/[img_name]
 ```
 
+## Result
+|BLEU| BLEU-1 | BLEU-2 | BLEU-3 | BLEU-4 |
+|----|--------|--------|--------|--------|
+|23.41|65.42|39.36|21.31|12.19|
 ## Captioned Image Example
 
 ![Example 1](./result/ex1.jpg)
